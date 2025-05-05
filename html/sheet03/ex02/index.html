@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario de Registro</title>
+    </head>
+    <body>
+        <h1>Formulario de Registro</h1>
+        <form action ="#" method="post">
+            <fieldset>
+                <legend>Registro de usuario</legend>
+                
+                <label>Nombre:</label>
+                <input type="text" id="tbName" required><br><br>
+
+                <label>Apellido:</label>
+                <input type="text" id="tbSurname" required><br><br>
+
+                <label>Contraseña:</label>
+                <input type="password" id="tbPass" required minlength="8" title="Debe tener 8 caracteres"><br><br>
+
+                <label>Telefono:</label>
+                <input type="tel" id="tbPhonNum" pattern="[0-9]{10}" title="Debe contener 10 digitos"><br><br>
+
+                <label>Fecha de nacimiento:</label>
+                <input type="date" id="tbBirthD" required><br><br>
+
+                <label>Genero:</label>
+                <select id="rbGender">
+                    <option value="Masculino">Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                    <option value="Otro">Otro</option>
+                </select><br><br>
+
+                <label>Aceptar terminos y condiciones:</label>
+                <input type="checkbox" id="cbTermsServices" required><br><br>
+            </fieldset>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </body>
+</html>
