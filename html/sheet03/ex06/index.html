@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Cita Médica</title>
+</head>
+<body>
+    <h1>Formulario de Reserva de Cita Médica</h1>
+    <form action="#" method="post">
+
+        <fieldset>
+
+            <legend>Tipo de Consulta</legend>
+
+            <label>
+
+                <input type="checkbox" name="consulta" value="general" required> General
+
+            </label><br>
+
+            <label>
+
+                <input type="checkbox" name="consulta" value="especialidad"> Especialidad
+            
+            </label><br>
+
+            <label>
+
+                <input type="checkbox" name="consulta" value="urgencias"> Urgencias
+            
+            </label>
+
+        </fieldset><br>
+
+        <label for="fecha-hora">Fecha y Hora:</label>
+
+        <input type="datetime-local" id="fecha-hora" name="fecha-hora" required><br><br>
+
+        <label for="sintomas">Descripción de los Síntomas:</label><br>
+        
+        <textarea id="sintomas" name="sintomas" rows="4" cols="50" required></textarea><br><br>
+
+        <label for="documentos">Subir Documentos Médicos:</label>
+        
+        <input type="file" id="documentos" name="documentos"><br><br>
+
+        <label for="medico">Seleccionar Médico:</label>
+        
+        <select id="medico" name="medico" required>
+            
+            <option value="">Seleccione un médico</option>
+            
+            <option value="medico1">Dr. House</option>
+            
+            <option value="medico2">Dr. Strange</option>
+            
+            <option value="medico3">Dr. Wayne</option>
+
+        </select><br><br>
+
+        <button type="submit">Reservar Cita</button>
+    </form>
+</body>
+</html>
