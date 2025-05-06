@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+
+        <meta charset="utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Formulario Accesible</title>
+
+    </head>
+    <body>
+  
+        <form action="#" method="post">
+       
+            <div>
+           
+                <label for="usuario">Usuario</label>
+           
+                <input type="text" id="usuario" name="usuario" aria-label="Ingrese su nombre de usuario" required>
+        
+            </div><br>
+
+            <div>
+      
+                <label for="contraseña">Contraseña</label>
+        
+                <input type="password" id="contraseña" name="contraseña" aria-label="Ingrese su contraseña" required>
+        
+            </div><br>
+
+        
+            <div>
+        
+                <label for="comentario">Comentario</label>
+        
+                <textarea id="comentario" name="comentario" rows="4" cols="50" aria-describedby="comentario-ayuda"></textarea>
+        
+                <p id="comentario-ayuda">Escriba aquí sus comentarios o sugerencias.</p>
+        
+            </div><br>
+
+            <button type="submit">Enviar</button>
+    
+        </form>
+    </body>
+</html>
