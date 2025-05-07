@@ -6,7 +6,24 @@
 ial-scale=1.0">
 <title>Ejercicio 17</title>
 <style>
-/* Aquí van tus estilos CSS */
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Define 3 columnas de igual tamaño */
+        grid-template-rows: auto; 
+        gap: 10px;
+        border: 1px solid black;
+        text-align: center;
+    }
+
+    .grid-container > div {
+        border: 1px solid black;
+        padding: 20px;
+        font-size: 20px;
+    }
+
+    .grid-item {
+        grid-column: span 2;
+    }
 </style>
 </head>
 <body>
