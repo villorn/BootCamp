@@ -6,7 +6,19 @@
 ial-scale=1.0">
 <title>Ejercicio 16</title>
 <style>
-/* Aquí van tus estilos CSS */
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+        border: 1px solid black;
+        text-align: center;
+    }
+    .grid-container > div {
+        border: 1px solid black;
+        padding: 20px;
+        font-size: 30px;
+    }
+
 </style>
 </head>
 <body>
