@@ -6,7 +6,15 @@
 ial-scale=1.0">
 <title>Ejercicio 22</title>
 <style>
-/* Aquí van tus estilos CSS */
+    .animate-box{
+        animation: move 2s infinite
+    }
+
+    @keyframes move {
+        0% {transform: translateX(0);}
+        50% {transform: translateX(100px);}
+        100% {transform: translateX(0);}
+    }
 </style>
 </head>
 <body>
