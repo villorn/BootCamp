@@ -6,7 +6,20 @@
 ial-scale=1.0">
 <title>Ejercicio 24</title>
 <style>
-/* Aquí van tus estilos CSS */
+    .flex-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        border: 1px solid black;
+        padding: 10px;
+    }
+
+    @media (max-width: 600px) {
+        .flex-container {
+            flex-direction: column;
+        }
+    }
 </style>
 </head>
 <body>
