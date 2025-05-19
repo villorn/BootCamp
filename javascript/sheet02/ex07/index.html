@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function contarVocales(str) {
+            var vocales = "aeiouAEIOU";
+            var contador = 0;
+            for (let char of str) {
+                if (vocales.includes(char)) {
+                    contador++;
+                }
+            }
+            return contador;
+        }
+        console.log(contarVocales("javascript"));
+    </script>
+</head>
+</html>
