@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palabra Más Larga</title>
+    <script>
+        function encontrarPalabraMasLarga(palabras) {
+            return palabras.reduce((palabraMasLarga, palabraActual) => {
+                return palabraActual.length > palabraMasLarga.length ? palabraActual : palabraMasLarga;
+            }, "");
+        }
+
+        const palabras = ["manzana", "plátano", "sandía", "melocotón", "cereza"];
+        console.log("Array de palabras:", palabras);
+        console.log("Palabra más larga:", encontrarPalabraMasLarga(palabras));
+    </script>
+</head>
+<body>
+</body>
+</html>
