@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function añadirElemento() {
+            const cajaTexto = document.getElementById("cajaTexto").value.trim();
+            if (cajaTexto === "") {
+                alert("El texto no puede estar vacío");
+                return;
+            }
+            const lista = document.getElementById("lista");
+            const nuevoElemento = document.createElement("li");
+            nuevoElemento.textContent = cajaTexto;
+            lista.appendChild(nuevoElemento);
+            document.getElementById("cajaTexto").value = "";
+        }
+    </script>
+</head>
+<body>
+    <h1>Manipulación del DOM</h1>
+    <input type="text" id="cajaTexto" placeholder="Escribe algo aquí">
+    <button onclick="añadirElemento()">Añadir elemento</button>
+    <ul id="lista"></ul>
+</body>
+</html>
