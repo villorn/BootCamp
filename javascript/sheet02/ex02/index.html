@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronómetro Simple</title>
+    <script>
+        function filtrarImpares(numeros) {
+            var impares = [];
+            numeros.forEach(element => {
+                if (element % 2 !== 0) { 
+                    impares.push(element);
+                }
+            });
+            return impares;
+        }
+        var numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        console.log("Números impares: " + filtrarImpares(numeros).join(", "));
+    </script>
+</head>
+</html>
