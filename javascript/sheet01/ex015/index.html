@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #contador {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        let segundos = 0;
+        let intervalo;
+
+        function iniciarCronometro() {
+            if (!intervalo) {
+                intervalo = setInterval(() => {
+                    segundos++;
+                    document.getElementById("contador").textContent = `Segundos: ${segundos}`;
+                }, 1000);
+            }
+        }
+
+        function detenerCronometro() {
+            clearInterval(intervalo);
+            intervalo = null;
+        }
+
+        function reiniciarCronometro() {
+            detenerCronometro();
+            segundos = 0;
+            document.getElementById("contador").textContent = "Segundos: 0";
+        }
+    </script>
+</head>
+<body>
+    <h1>Cronómetro Simple</h1>
+    <div id="contador">Segundos: 0</div>
+    <button onclick="iniciarCronometro()">Iniciar</button>
+    <button onclick="detenerCronometro()">Detener</button>
+    <button onclick="reiniciarCronometro()">Reiniciar</button>
+</body>
+</html>
