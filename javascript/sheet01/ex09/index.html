@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>Manipulación de Cadenas</h1>
+    <script>
+        function invertirCadena(cadena) {
+            return cadena.split("").reverse().join("");
+        }
+
+        function contarVocales(cadena) {
+            let vocales = "aeiouAEIOU";
+            let contador = 0;
+
+            for (let char of cadena) {
+                if (vocales.includes(char)) {
+                    contador++;
+                }
+            }
+
+            return contador;
+        }
+
+        let texto = "Hola Mundo";
+        console.log("Texto original:", texto);
+        console.log("Texto invertido:", invertirCadena(texto));
+        console.log("Número de vocales:", contarVocales(texto));
+    </script>
+</body>
+</html>
