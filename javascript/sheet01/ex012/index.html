@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function calcular(operacion) {
+            const num1 = parseFloat(document.getElementById("numero1").value);
+            const num2 = parseFloat(document.getElementById("numero2").value);
+
+            if (isNaN(num1) || isNaN(num2)) {
+                alert("Por favor, ingresa números válidos.");
+                return;
+            }
+
+            let resultado;
+            switch (operacion) {
+                case "sumar":
+                    resultado = num1 + num2;
+                    break;
+                case "restar":
+                    resultado = num1 - num2;
+                    break;
+                case "multiplicar":
+                    resultado = num1 * num2;
+                    break;
+                case "dividir":
+                    if (num2 === 0) {
+                        alert("No se puede dividir entre 0.");
+                        return;
+                    }
+                    resultado = num1 / num2;
+                    break;
+                default:
+                    alert("Operación no válida.");
+                    return;
+            }
+
+            document.getElementById("resultado").textContent = `Resultado: ${resultado}`;
+        }
+    </script>
+</head>
+<body>
+    <h1>Calculadora Básica</h1>
+    <div>
+        <input type="number" id="numero1" placeholder="Número 1">
+        <input type="number" id="numero2" placeholder="Número 2">
+    </div>
+    <div>
+        <button onclick="calcular('sumar')">Sumar</button>
+        <button onclick="calcular('restar')">Restar</button>
+        <button onclick="calcular('multiplicar')">Multiplicar</button>
+        <button onclick="calcular('dividir')">Dividir</button>
+    </div>
+    <h2 id="resultado">Resultado: </h2>
+</body>
+</html>
