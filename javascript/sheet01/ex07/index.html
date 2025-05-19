@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>Arreglos</h1>
+    <script>
+        function diaDeLaSemana() {
+            var diasDeLaSemana = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
+            for (let i = 0; i < diasDeLaSemana.length; i++) {
+                console.log(diasDeLaSemana[i]);
+            }
+        }
+        function sumarArreglo(numeros) {
+            var suma = 0;
+            numeros.forEach(element => {
+               suma +=element;
+            });
+            return suma;
+        }
+        let numerosASumar = [1, 2, 3, 4, 5];
+        diaDeLaSemana();
+        console.log(sumarArreglo(numerosASumar));
+    </script>
+</body>
+</html>
