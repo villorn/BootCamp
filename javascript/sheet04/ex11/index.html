@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            .seleccionado {
+                background-color: #ffd700;
+            }
+        </style>
+    </head>
+    <body>
+        <ul id="tareas">
+            <li>Tarea 1</li>
+            <li>Tarea 2</li>
+            <li>Tarea 3</li>
+        </ul>
+        <script>
+            const lista = document.getElementById('tareas');
+            lista.addEventListener('click', function(e) {
+                if (e.target.tagName === 'LI') {
+                    Array.from(lista.children).forEach(li => li.classList.remove('seleccionado'));
+                    e.target.classList.add('seleccionado');
+                }
+            });
+        </script>
+    </body>
+</html>
