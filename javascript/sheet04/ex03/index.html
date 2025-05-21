@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Saludo DOM</title>
+    </head>
+    <body>
+        <div id="saludo">Hola, mundo!</div>
+        <button id="agregar">Agregar Elemento</button>
+        <button id="eliminar">Eliminar Último</button>
+        <ul id="lista"></ul>
+        <script>
+            document.getElementById('saludo').textContent = 'Hola, DOM!';
+
+            document.getElementById('agregar').addEventListener('click', function() {
+                const li = document.createElement('li');
+                li.textContent = 'Elemento nuevo';
+                document.getElementById('lista').appendChild(li);
+            });
+
+            document.getElementById('eliminar').addEventListener('click', function() {
+                const lista = document.getElementById('lista');
+                if (lista.lastChild) {
+                    lista.removeChild(lista.lastChild);
+                }
+            });
+        </script>
+    </body>
+</html>
