@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            .caja {
+                width: 100px;
+                height: 100px;
+                display: inline-block;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="caja"></div>
+        <div class="caja"></div>
+        <div class="caja"></div>
+        <button id="cambiarColor">Cambiar color</button>
+        <script>
+            document.getElementById('cambiarColor').addEventListener('click', function() {
+                const cajas = document.querySelectorAll('.caja');
+                cajas.forEach(caja => {
+                    caja.style.backgroundColor = 'yellow';
+                });
+            });
+        </script>
+    </body>
+</html>
