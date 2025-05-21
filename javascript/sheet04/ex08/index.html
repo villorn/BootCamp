@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            .resaltadoClass {
+                width: 100px;
+                height: 100px;
+                display: inline-block;
+                background-color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="resaltadoId" class="resaltadoClass">que si quiere bolsa</div>
+        <button id="alternarResaltado">Alternar resaltado</button>
+        <script>
+            document.getElementById('alternarResaltado').addEventListener('click', function() {
+                document.getElementById('resaltadoId').classList.toggle('resaltadoClass');
+            });
+        </script>
+    </body>
+</html>
