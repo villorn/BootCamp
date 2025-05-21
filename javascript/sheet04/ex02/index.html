@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Saludo DOM</title>
+    </head>
+    <body>
+        <div id="saludo">Hola, mundo!</div>
+        <button id="boton">Haz clic aquí</button>
+        <script>
+            document.getElementById('saludo').textContent = 'Hola, DOM!';
+            document.getElementById('boton').addEventListener('click', function() {
+                this.style.backgroundColor = 'blue';
+            });
+        </script>
+    </body>
+</html>
