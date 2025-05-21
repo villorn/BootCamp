@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            const txt = document.getElementById('nombre');
+            const err = document.getElementById('error');
+            if(txt.value.trim != ""){
+                err.textContent = "Por favor, rellena el campo.";
+                err.style.color = "red";
+            }
+        </script>
+        <form id="formulario">
+            <input type="text" id="nombre" placeholder="Ingresa tu nombre">
+            <button type="submit">Enviar</button>
+            <p id="error" style="display: none;"></p>
+        </form>
+    </body>
+</html>
