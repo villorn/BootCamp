@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .error {
+            border: 2px solid red;
+            background-color: #ffe6e6;
+        }
+        .exito {
+            border: 2px solid green;
+            background-color: #e6ffe6;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const correo = document.getElementById('correo');
+        const formulario = document.getElementById('formulario');
+
+        correo.addEventListener('input', function() {
+            if (correo.value.trim() === "") {
+                correo.classList.remove('exito');
+                correo.classList.add('error');
+                correo.setCustomValidity("Este campo debe estar relleno");
+            } else {
+                correo.classList.remove('error');
+                correo.classList.add('exito');
+                correo.setCustomValidity("");
+            }
+        });
+
+        formulario.addEventListener('submit', function(e) {
+            if (correo.value.trim() === "") {
+                correo.classList.remove('exito');
+                correo.classList.add('error');
+                correo.setCustomValidity("Este campo debe estar relleno");
+                correo.reportValidity();
+                e.preventDefault();
+            }
+        });
+    </script>
+    <form id="formulario">
+        <input type="email" id="correo" placeholder="Ingresa tu correo electrónico">
+        <input type="text" placeholder="Ingresa tu dirección">
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
