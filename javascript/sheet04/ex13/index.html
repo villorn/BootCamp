@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            .activo {
+                background-color: red;
+                color: white;
+                border: 3px solid yellow;
+            }
+            .caja{
+                width: 100px;
+                height: 100px;
+                display: inline-block;
+                background-color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="caja">Hola</div>
+        <div class="caja">Hola</div>
+        <div class="caja activo">Hola</div>
+        <button id="cambiarColor">Cambiar todos</button>
+        <script>
+            document.getElementById('cambiarColor').addEventListener('click', function() {
+                const cajas = document.querySelectorAll('.caja');
+                cajas.forEach(caja => {
+                    caja.classList.toggle('activo');
+                });
+            });
+        </script>
+    </body>
+</html>
