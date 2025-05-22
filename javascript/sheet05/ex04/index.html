@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <button id="iniciar">Iniciar tareas</button>
+    <div id="resultado"></div>
+    <script>
+        function tareaA() {
+            return new Promise(res => setTimeout(() => res("A"), 1000));
+        }
+        function tareaB() {
+            return new Promise(res => setTimeout(() => res("B"), 1500));
+        }
+        function tareaC() {
+            return new Promise(res => setTimeout(() => res("C"), 2000));
+        }
+
+        document.getElementById('iniciar').onclick = () => {
+            document.getElementById('resultado').textContent = "Esperando tareas...";
+            Promise.all([tareaA(), tareaB(), tareaC()])
+                .then(resultados => {
+                    document.getElementById('resultado').textContent = "Resultados: " + resultados.join(", ");
+                    console.log(resultados);
+                });
+        };
+    </script>
+</body>
+</html>
