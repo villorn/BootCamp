@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <button id="iniciar">Iniciar autenticación</button>
+    <div id="resultado"></div>
+    <script>
+        
+        function loginUsuario() {
+            return new Promise(resolve => {
+                setTimeout(() => resolve("usuario123"), 1000);
+            });
+        }
+
+        function obtenerPerfil(usuario) {
+            return new Promise(resolve => {
+                setTimeout(() => resolve({ nombre: "Ana", rol: "admin" }), 1000);
+            });
+        }
+
+        function mostrarDashboard(perfil) {
+            const mensaje = `Bienvenida, ${perfil.nombre} (${perfil.rol})`;
+            document.getElementById('resultado').textContent = mensaje;
+            console.log(mensaje);
+        }
+
+        document.getElementById('iniciar').addEventListener('click', () => {
+            document.getElementById('resultado').textContent = "Autenticando...";
+            loginUsuario()
+                .then(usuario => obtenerPerfil(usuario))
+                .then(perfil => mostrarDashboard(perfil));
+        });
+    </script>
+</body>
+</html>
