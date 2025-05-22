@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <button id="btn">Esperar 1 segundo</button>
+    <div id="mensaje"></div>
+    <script>
+        function espera(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        document.getElementById('btn').addEventListener('click', () => {
+            document.getElementById('mensaje').textContent = "Esperando...";
+            espera(1000).then(() => {
+                document.getElementById('mensaje').textContent = "Han pasado 1 segundos";
+            });
+        });
+    </script>
+</body>
+</html>
