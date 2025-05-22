@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <button id="probar">Probar promesa</button>
+    <div id="resultado"></div>
+    <script>
+        function promesaAleatoria() {
+            return new Promise((res, rej) => {
+                setTimeout(() => Math.random() < 0.5 ? res("¡Éxito!") : rej("¡Error!"), 500);
+            });
+        }
+
+        document.getElementById('probar').onclick = () => {
+            promesaAleatoria()
+                .then(msg => resultado.textContent = msg)
+                .catch(err => resultado.textContent = err);
+        };
+    </script>
+</body>
+</html>
