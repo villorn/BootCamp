@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <button id="iniciar">Iniciar cuenta regresiva</button>
+    <div id="mensaje"></div>
+    <script>
+        function espera(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        async function cuentaRegresiva() {
+            const mensaje = document.getElementById('mensaje');
+            mensaje.textContent = "3...";
+            await espera(1000);
+            mensaje.textContent = "2...";
+            await espera(1000);
+            mensaje.textContent = "1...";
+            await espera(1000);
+            mensaje.textContent = "¡Despegue!";
+        }
+
+        document.getElementById('iniciar').onclick = cuentaRegresiva;
+    </script>
+</body>
+</html>
