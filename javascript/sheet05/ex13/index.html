@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>GET y POST con async/await</title>
+</head>
+<body>
+    <button id="cargar">Cargar usuarios</button>
+    <pre id="usuarios"></pre>
+
+    <hr>
+
+    <form id="postForm">
+        <input type="text" id="title" name="title" placeholder="Título" required>
+        <br>
+        <textarea id="body" name="body" placeholder="Contenido" required></textarea>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+        document.getElementById('cargar').onclick = async function() {
+            const res = await fetch('https://jsonplaceholder.typicode.com/users');
+            const datos = await res.json();
+            let salida = "Usuarios:\n";
+            datos.forEach(usuario => {
+                salida += `- ${usuario.name}\n`;
+            });
+            document.getElementById('usuarios').textContent = salida;
+            console.log(salida);
+        };
+
+        document.getElementById('postForm').onsubmit = async function(e) {
+            e.preventDefault();
+            const title = document.getElementById('title').value;
+            const body = document.getElementById('body').value;
+
+            const res = await fetch('https://jsonplaceholder.typicode.com/posts', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ title, body })
+            });
+
+            const data = await res.json();
+            console.log(data);
+        };
+    </script>
+</body>
+</html>
