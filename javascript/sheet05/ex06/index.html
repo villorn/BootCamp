@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <button id="iniciar">Iniciar cadena</button>
+    <div id="resultado"></div>
+    <script>
+        function primeraPromesa() {
+            return new Promise(resolve => setTimeout(() => resolve("Primera resuelta"), 500));
+        }
+        function segundaPromesa() {
+            return new Promise((resolve, reject) => setTimeout(() => reject("Segunda falló"), 500));
+        }
+        function terceraPromesa() {
+            return new Promise(resolve => setTimeout(() => resolve("Tercera resuelta"), 500));
+        }
+
+        document.getElementById('iniciar').onclick = function() {
+            document.getElementById('resultado').textContent = "Procesando...";
+            primeraPromesa()
+                .then(msg1 => {
+                    document.getElementById('resultado').textContent = msg1;
+                    return segundaPromesa();
+                })
+                .then(msg2 => {
+                    // Esto nunca se ejecutará si la segunda promesa falla
+                    return terceraPromesa();
+                })
+                .then(msg3 => {
+                    document.getElementById('resultado').textContent = msg3;
+                })
+                .catch(error => {
+                    document.getElementById('resultado').textContent = "Error capturado: " + error;
+                });
+        };
+    </script>
+</body>
+</html>
