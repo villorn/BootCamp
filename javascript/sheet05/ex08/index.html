@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <button id="probar">Probar promesa</button>
+    <div id="resultado"></div>
+    <script>
+        function promesaAleatoria() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    Math.random() < 0.5 ? resolve() : reject("Error aleatorio");
+                }, 500);
+            });
+        }
+
+        document.getElementById('probar').onclick = function() {
+            document.getElementById('resultado').textContent = "Procesando...";
+            promesaAleatoria()
+                .then(() => {
+                    document.getElementById('resultado').textContent = "¡Operación exitosa!";
+                })
+                .catch(error => {
+                    document.getElementById('resultado').textContent = "Ocurrió un error: " + error;
+                })
+                .finally(() => {
+                    setTimeout(() => {
+                        document.getElementById('resultado').textContent += "\nOperación terminada.";
+                    }, 500);
+                });
+        };
+    </script>
+</body>
+</html>
