@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <button id="probar">Probar operación</button>
+    <div id="resultado"></div>
+    <script>
+        function operacionAleatoria() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    Math.random() < 0.5 ? resolve("¡Éxito!") : reject("Error aleatorio");
+                }, 500);
+            });
+        }
+
+        async function intentarHastaTresVeces(operacion) {
+            for (let intento = 1; intento <= 3; intento++) {
+                try {
+                    const resultado = await operacion();
+                    return resultado;
+                } catch (e) {
+                    if (intento === 3) throw "Falló tras 3 intentos";
+                }
+            }
+        }
+
+        document.getElementById('probar').onclick = async function() {
+            document.getElementById('resultado').textContent = "Intentando...";
+            try {
+                const res = await intentarHastaTresVeces(operacionAleatoria);
+                document.getElementById('resultado').textContent = res;
+            } catch (err) {
+                document.getElementById('resultado').textContent = err;
+            }
+        };
+    </script>
+</body>
+</html>
