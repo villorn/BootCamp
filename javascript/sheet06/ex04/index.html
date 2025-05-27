@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <button id="cargar">Cargar matemáticas</button>
+    <script>
+        document.getElementById('cargar').onclick = async function() {
+            const mod = await import('./mathUtils.js');
+            console.log("suma(10, 5) =", mod.suma(10, 5));
+            console.log("multiplica(10, 5) =", mod.multiplica(10, 5));
+        };
+    </script>
+</body>
+</html>
