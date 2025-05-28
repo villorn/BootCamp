@@ -1,164 +1,84 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mundo Pokémon</title>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="resources/css/styles.css">
-</head>
-<body>
-    <div class="search-bar">
-        <input type="text" placeholder="Filtra pokemons por nombre...">
-    </div>
-    <div class="pokemon-list">
-        <div class="pokemon-card">
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="Bulbasaur">
-            <h3>Bulbasaur</h3>
-            <div class="types">
-                <span class="type">Grass</span>
-                <span class="type">Poison</span>
-            </div>
-            <div class="evolution">Base Pokémon</div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mundo Pokémon</title>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="resources/css/styles.css">
+    </head>
+    <body>
+        <div class="search-bar">
+            <input type="text" placeholder="Filtra pokemons por nombre...">
         </div>
-        <div class="pokemon-card">
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png" alt="Ivysaur">
-            <h3>Ivysaur</h3>
-            <div class="types">
-                <span class="type">Grass</span>
-                <span class="type">Poison</span>
-            </div>
-            <div class="evolution">Evoluciona de: Bulbasaur</div>
-        </div>
-        <div class="pokemon-card">
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png" alt="Venusaur">
-            <h3>Venusaur</h3>
-            <div class="types">
-                <span class="type">Grass</span>
-                <span class="type">Poison</span>
-            </div>
-            <div class="evolution">Evoluciona de: Ivysaur</div>
-        </div>
-        <div class="pokemon-card">
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png" alt="Charmander">
-            <h3>Charmander</h3>
-            <div class="types">
-                <span class="type">Fire</span>
-            </div>
-            <div class="evolution">Base Pokémon</div>
-        </div>
-        <div class="pokemon-card">
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png" alt="Charmeleon">
-            <h3>Charmeleon</h3>
-            <div class="types">
-                <span class="type">Fire</span>
-            </div>
-            <div class="evolution">Evoluciona de: Charmander</div>
-        </div>
-        <div class="pokemon-card">
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png" alt="Charizard">
-            <h3>Charizard</h3>
-            <div class="types">
-                <span class="type">Fire</span>
-                <span class="type">Flying</span>
-            </div>
-            <div class="evolution">Evoluciona de: Charmeleon</div>
-        </div>
-        <div class="pokemon-card">
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png" alt="Caterpie">
-            <h3>Caterpie</h3>
-            <div class="types">
-                <span class="type">Bug</span>
-            </div>
-            <div class="evolution">Base Pokémon</div>
-        </div>
-        <div class="pokemon-card">
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png" alt="Metapod">
-            <h3>Metapod</h3>
-            <div class="types">
-                <span class="type">Bug</span>
-            </div>
-            <div class="evolution">Evoluciona de: Caterpie</div>
-        </div>
-        <div class="pokemon-card">
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png" alt="Butterfree">
-            <h3>Butterfree</h3>
-            <div class="types">
-                <span class="type">Bug</span>
-                <span class="type">Flying</span>
-            </div>
-            <div class="evolution">Evoluciona de: Metapod</div>
-        </div>
-        <div class="pokemon-card">
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/13.png" alt="Weedle">
-            <h3>Weedle</h3>
-            <div class="types">
-                <span class="type">Bug</span>
-                <span class="type">Poison</span>
-            </div>
-            <div class="evolution">Base Pokémon</div>
-        </div>
-        <div class="pokemon-card">
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/14.png" alt="Kakuna">
-            <h3>Kakuna</h3>
-            <div class="types">
-                <span class="type">Bug</span>
-                <span class="type">Poison</span>
-            </div>
-            <div class="evolution">Evoluciona de: Weedle</div>
-        </div>
-        <div class="pokemon-card">
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/15.png" alt="Beedrill">
-            <h3>Beedrill</h3>
-            <div class="types">
-                <span class="type">Bug</span>
-                <span class="type">Poison</span>
-            </div>
-            <div class="evolution">Evoluciona de: Kakuna</div>
-        </div>
-        <div class="pokemon-card">
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png" alt="Pidgey">
-            <h3>Pidgey</h3>
-            <div class="types">
-                <span class="type">Normal</span>
-                <span class="type">Flying</span>
-            </div>
-            <div class="evolution">Base Pokémon</div>
-        </div>
-        <div class="pokemon-card">
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png" alt="Pidgeotto">
-            <h3>Pidgeotto</h3>
-            <div class="types">
-                <span class="type">Normal</span>
-                <span class="type">Flying</span>
-            </div>
-            <div class="evolution">Evoluciona de: Pidgey</div>
-        </div>
-        <div class="pokemon-card">
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/18.png" alt="Pidgeot">
-            <h3>Pidgeot</h3>
-            <div class="types">
-                <span class="type">Normal</span>
-                <span class="type">Flying</span>
-            </div>
-            <div class="evolution">Evoluciona de: Pidgeotto</div>
-        </div>
-        <div class="pokemon-card">
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/19.png" alt="Rattata">
-            <h3>Rattata</h3>
-            <div class="types">
-                <span class="type">Normal</span>
-            </div>
-            <div class="evolution">Base Pokémon</div>
-        </div>
-        <div class="pokemon-card">
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/20.png" alt="Raticate">
-            <h3>Raticate</h3>
-            <div class="types">
-                <span class="type">Normal</span>
-            </div>
-            <div class="evolution">Evoluciona de: Rattata</div>
-        </div>
-    </div>
-</body>
+        <div class="pokemon-list"></div>
+        <script>
+        const pokemonListDiv = document.querySelector('.pokemon-list');
+        const searchInput = document.querySelector('.search-bar input');
+        let todosLosPokemons = [];
+
+        //Se cargan todos los pokemon
+        async function cargarPokemons() {
+            const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=50');
+            const data = await res.json();
+            const pokemons = data.results;
+
+            const detalles = [];
+            for (let i = 0; i < pokemons.length; i++) {
+                const poke = pokemons[i];
+            try {
+                const resDetalle = await fetch(poke.url);
+                const detalle = await resDetalle.json();
+
+                //Se comprueba si vienen de una evolución
+                const resEspecie = await fetch(detalle.species.url);
+                const especie = await resEspecie.json();
+                let evolucionaDe = null;
+                if (especie.evolves_from_species) {
+                    evolucionaDe = especie.evolves_from_species.name;
+                }
+                detalle.evolucionaDe = evolucionaDe;
+                detalles.push(detalle);
+            } catch (e) {}
+            }
+            //Se guarda la informacion de todos los pokemon
+            todosLosPokemons = detalles;
+            mostrarPokemons(detalles);
+        }
+
+        function mostrarPokemons(pokemons) {
+            //Se borra la lista de tarjetas
+            pokemonListDiv.innerHTML = "";
+            //Por cada pokemon en la lista se hace un desglose de sus valores y se añaden a una card
+            pokemons.forEach(poke => {
+                console.log("Se cargo el pokemon: "+poke.name)
+                //Se coge los tipos de el pokemon y se separan en spans que se suman para luego añadir a la card
+                const tipos = poke.types.map(t => `<span class="type">${t.type.name}</span>`).join('');
+                //Se crea la card y se añade al htnl de la lista luego de rellenar los campos
+                const card = `
+                    <div class="pokemon-card">
+                        <img src="${poke.sprites.front_default}">
+                        <h3>${capitalize(poke.name)}</h3>
+                        <div class="types">${tipos}</div>
+                        <div class="evolution">ID: ${poke.id}</div>
+                        ${poke.evolucionaDe ? `<div class="evolution">Evoluciona de: ${poke.evolucionaDe.charAt(0).toUpperCase() + poke.evolucionaDe.slice(1)}</div>` : ""}
+                    </div>
+                `;
+                pokemonListDiv.innerHTML += card;
+            });
+        }
+
+        //Trigger que se activa al usar la barra de busqueda
+        searchInput.addEventListener('input', function() {
+            const filtro = this.value.toLowerCase();
+            //Se crea una nueva array usando la que tiene todos los pokemons aprovechando el filter y añadiendo los que tengan un nombre que coincidan con lo que hay en la barra de busqueda
+            const filtrados = todosLosPokemons.filter(poke =>
+                poke.name.toLowerCase().includes(filtro)
+            );
+            //Se vuelve a llenar la lista con el nuevo array filtrada
+            mostrarPokemons(filtrados);
+        });
+        cargarPokemons();
+        </script>
+    </body>
 </html>
