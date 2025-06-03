@@ -1,0 +1,31 @@
+.tarjeta {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  width: 250px;
+  margin: 16px;
+  display: inline-block;
+  background: #fff;
+  box-shadow: 2px 2px 8px #eee;
+  overflow: hidden;
+  vertical-align: top;
+}
+
+.tarjeta__imagen {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+
+.tarjeta__contenido {
+  padding: 16px;
+}
+
+.tarjeta__nombre {
+  margin: 0 0 8px 0;
+  font-size: 1.2em;
+}
+
+.tarjeta__ocupacion {
+  margin: 0;
+  color: #555;
+}
